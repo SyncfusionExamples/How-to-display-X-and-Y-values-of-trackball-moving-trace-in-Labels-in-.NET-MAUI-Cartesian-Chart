@@ -9,19 +9,18 @@ namespace DisplayTrackballValues
 {
     public class ViewModel
     {
-        public ObservableCollection<Model> Data { get; set; }
+        public ObservableCollection<Model> ProductSalesDetails { get; set; }
 
         public ViewModel()
         {
-            Data = new ObservableCollection<Model>();
-            DateTime startDate = new DateTime(2000, 01, 04);
-            DateTime endDate = new DateTime(2000, 09, 05);
-            Data.Add(new Model() { YValue1 = 5,  YValue2 = 5,  YValue3 = 5,  Date = new DateTime(2001, 01, 05) });
-            Data.Add(new Model() { YValue1 = 10, YValue2 = 15, YValue3 = 13, Date = new DateTime(2001, 03, 06) });
-            Data.Add(new Model() { YValue1 = 15, YValue2 = 20, YValue3 = 25, Date = new DateTime(2001, 05, 07) });
-            Data.Add(new Model() { YValue1 = 10, YValue2 = 15, YValue3 = 20, Date = new DateTime(2001, 07, 08) });
-            Data.Add(new Model() { YValue1 = 25, YValue2 = 20, YValue3 = 35, Date = new DateTime(2001, 09, 09) });
-            Data.Add(new Model() { YValue1 = 35, YValue2 = 40, YValue3 = 50, Date = new DateTime(2001, 11, 10) });
+            ProductSalesDetails = new ObservableCollection<Model>();
+
+            ProductSalesDetails.Add(new Model() { ProductASales = 5,  ProductBSales = 5,  ProductCSales = 5,  Date = new DateTime(2001, 01, 05) });
+            ProductSalesDetails.Add(new Model() { ProductASales = 10, ProductBSales = 15, ProductCSales = 13, Date = new DateTime(2001, 03, 06) });
+            ProductSalesDetails.Add(new Model() { ProductASales = 15, ProductBSales = 20, ProductCSales = 25, Date = new DateTime(2001, 05, 07) });
+            ProductSalesDetails.Add(new Model() { ProductASales = 10, ProductBSales = 15, ProductCSales = 20, Date = new DateTime(2001, 07, 08) });
+            ProductSalesDetails.Add(new Model() { ProductASales = 25, ProductBSales = 20, ProductCSales = 35, Date = new DateTime(2001, 09, 09) });
+            ProductSalesDetails.Add(new Model() { ProductASales = 35, ProductBSales = 40, ProductCSales = 50, Date = new DateTime(2001, 11, 10) });
 
         }
     }

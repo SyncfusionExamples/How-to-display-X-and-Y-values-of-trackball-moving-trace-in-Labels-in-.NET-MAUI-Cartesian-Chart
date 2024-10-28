@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DisplayTrackballValues.MainPage"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:local="clr-namespace:DisplayTrackballValues">
 
     <ContentPage.BindingContext>
@@ -30,57 +29,102 @@
                 <chart:ChartTrackballBehavior ShowLabel="False"/>
             </chart:SfCartesianChart.TrackballBehavior>
 
-            <chart:LineSeries ItemsSource="{Binding Data}"
+            <chart:SfCartesianChart.Legend>
+                <chart:ChartLegend/>
+            </chart:SfCartesianChart.Legend>
+
+            <chart:LineSeries ItemsSource="{Binding ProductSalesDetails}"
+                              x:Name="series1"
                               StrokeWidth="3"
                               XBindingPath="Date" 
-                              YBindingPath="YValue1"  
-                              ShowTrackballLabel="True"  
-                              Fill="Pink"/>
-            <chart:LineSeries ItemsSource="{Binding Data}"
+                              YBindingPath="ProductASales"  
+                              ShowTrackballLabel="True" 
+                              Label="Product A"
+                              Fill="RoyalBlue"/>
+            <chart:LineSeries ItemsSource="{Binding ProductSalesDetails}"
+                              x:Name="series2"
                               StrokeWidth="3"
                               XBindingPath="Date"
-                              YBindingPath="YValue2" 
+                              YBindingPath="ProductBSales" 
                               ShowTrackballLabel="True"
-                              Fill="LightBlue"/>
-            <chart:LineSeries ItemsSource="{Binding Data}"
+                              Label="Product B"
+                              Fill="HotPink"/>
+            <chart:LineSeries ItemsSource="{Binding ProductSalesDetails}"
+                              x:Name="series3"
                               StrokeWidth="3"
                               XBindingPath="Date"  
-                              YBindingPath="YValue3"
+                              YBindingPath="ProductCSales"
                               ShowTrackballLabel="True"
-                              Fill="LightGreen"/>
+                              Label="Product C"
+                              Fill="Green"/>
 
         </chart:SfCartesianChart>
-        <VerticalStackLayout Grid.Column="1">
+        <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
             <Label HorizontalOptions="Center" Text="Trackball Values" FontAttributes="Bold"/>
-            <ListView x:Name="listView" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame Background="{Binding Series.Fill}" CornerRadius="8" Margin="5" BorderColor="Gray">
-                                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" VerticalOptions="Center"  >
-                                    <Label Text="{Binding DataItem.Date, StringFormat='{0:dd/MM/yyyy}'}"
-                                           FontSize="14"
-                                           FontAttributes="Bold"                    
-                                           TextColor="Black"
-                                           VerticalOptions="Center"/>
-                                    <Label Text=" : "
-                                           FontSize="14"
-                                           FontAttributes="Bold"                   
-                                           TextColor="Black"
-                                           VerticalOptions="Center"/>
-                                    <Label Text="{Binding Label}"
-                                           FontSize="14"
-                                           FontAttributes="Bold"
-                                           TextColor="Black"
-                                           VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <VerticalStackLayout>
+                <Frame Background="LightBlue"  CornerRadius="8" Margin="5" BorderColor="Gray">
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" VerticalOptions="Center"  >
+                        <Label x:Name="dateLabel1"  
+                                   FontSize="14"
+                                   FontAttributes="Bold"                    
+                                   TextColor="Black"
+                                   VerticalOptions="Center"/>
+                        <Label Text=" : "
+                                   FontSize="14"
+                                   FontAttributes="Bold"                   
+                                   TextColor="Black"
+                                   VerticalOptions="Center"/>
+                        <Label x:Name="valueLabel1"  
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"
+                                   VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Frame Background="Pink"  CornerRadius="8" Margin="5" BorderColor="Gray">
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" VerticalOptions="Center"  >
+                        <Label x:Name="dateLabel2"  
+                               FontSize="14"
+                               FontAttributes="Bold"                    
+                               TextColor="Black"
+                               VerticalOptions="Center"/>
+                        <Label Text=" : "
+                               FontSize="14"
+                               FontAttributes="Bold"                   
+                               TextColor="Black"
+                               VerticalOptions="Center"/>
+                        <Label x:Name="valueLabel2"  
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="Black"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Frame Background="LightGreen"  CornerRadius="8" Margin="5" BorderColor="Gray">
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" VerticalOptions="Center"  >
+                        <Label x:Name="dateLabel3"  
+                               FontSize="14"
+                               FontAttributes="Bold"                    
+                               TextColor="Black"
+                               VerticalOptions="Center"/>
+                        <Label Text=" : "
+                               FontSize="14"
+                               FontAttributes="Bold"                   
+                               TextColor="Black"
+                               VerticalOptions="Center"/>
+                        <Label x:Name="valueLabel3"  
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="Black"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
         </VerticalStackLayout>
-
     </Grid>
 
 </ContentPage>
