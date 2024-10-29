@@ -25,6 +25,10 @@
                 <chart:DateTimeAxis Interval="2" EdgeLabelsVisibilityMode="AlwaysVisible"/>
             </chart:SfCartesianChart.XAxes>
 
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis/>
+            </chart:SfCartesianChart.YAxes>
+
             <chart:SfCartesianChart.TrackballBehavior>
                 <chart:ChartTrackballBehavior ShowLabel="False"/>
             </chart:SfCartesianChart.TrackballBehavior>
