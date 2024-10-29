@@ -28,6 +28,7 @@ namespace DisplayTrackballValues
                         StrokeWidth = 3,
                         Type = ShapeType.InvertedTriangle
                     };
+
                     dateLabel1.SetBinding(Label.TextProperty, new Binding("Date") { Source = item.DataItem, StringFormat = "{0:dd/MM/yyyy}" });
                     valueLabel1.SetBinding(Label.TextProperty, new Binding("Label") { Source = item });
                 }
@@ -43,6 +44,7 @@ namespace DisplayTrackballValues
                         StrokeWidth = 3,
                         Type = ShapeType.Cross
                     };
+
                     dateLabel2.SetBinding(Label.TextProperty, new Binding("Date") { Source = item.DataItem, StringFormat = "{0:dd/MM/yyyy}" });
                     valueLabel2.SetBinding(Label.TextProperty, new Binding("Label") { Source = item });
                 }
@@ -58,6 +60,7 @@ namespace DisplayTrackballValues
                         StrokeWidth = 3,
                         Type = ShapeType.Diamond
                     };
+                    
                     dateLabel3.SetBinding(Label.TextProperty, new Binding("Date") { Source = item.DataItem, StringFormat = "{0:dd/MM/yyyy}" });
                     valueLabel3.SetBinding(Label.TextProperty, new Binding("Label") { Source = item });
                 }

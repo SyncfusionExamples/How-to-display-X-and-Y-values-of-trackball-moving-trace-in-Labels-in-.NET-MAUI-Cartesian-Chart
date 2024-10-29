@@ -1,6 +1,6 @@
-# How to display X and Y values of trackball moving trace in layout in .NET MAUI Cartesian Chart
+# How to display X and Y values of trackball moving trace in Labels in .NET MAUI Cartesian Chart
 
-The [.NET MAUI Cartesian Chart](https://www.syncfusion.com/maui-controls/maui-charts) allows you to display X and Y values of trackball moving trace in layout. This can be achieved using the [TrackballCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_TrackballCreated) event provided by the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+The [.NET MAUI Cartesian Chart](https://www.syncfusion.com/maui-controls/maui-charts) allows you to display X and Y values of trackball moving trace in Labels. This can be achieved using the [TrackballCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_TrackballCreated) event provided by the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 **Step 1 :** Initialize the SfCartesianChart with [Trackball Behavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html), Create the [TrackballCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_TrackballCreated) event, which is triggered when the trackball moves from one data point to another. Refer to the [documentation](https://help.syncfusion.com/maui/cartesian-charts/getting-started) for detailed steps on initializing the SfCartesianChart.
 
@@ -32,25 +32,25 @@ The [.NET MAUI Cartesian Chart](https://www.syncfusion.com/maui-controls/maui-c
 
             <chart:LineSeries ItemsSource="{Binding ProductSalesDetails}"
                               x:Name="series1"
-                              StrokeWidth="3"
                               XBindingPath="Date" 
                               YBindingPath="ProductASales"  
+                              StrokeWidth="3"
                               ShowTrackballLabel="True" 
                               Label="Product A"
                               Fill="RoyalBlue"/>
             <chart:LineSeries ItemsSource="{Binding ProductSalesDetails}"
                               x:Name="series2"
-                              StrokeWidth="3"
                               XBindingPath="Date"
                               YBindingPath="ProductBSales" 
+                              StrokeWidth="3"
                               ShowTrackballLabel="True"
                               Label="Product B"
                               Fill="HotPink"/>
             <chart:LineSeries ItemsSource="{Binding ProductSalesDetails}"
                               x:Name="series3"
-                              StrokeWidth="3"
                               XBindingPath="Date"  
                               YBindingPath="ProductCSales"
+                              StrokeWidth="3"
                               ShowTrackballLabel="True"
                               Label="Product C"
                               Fill="Green"/>
@@ -175,12 +175,14 @@ private void chart_TrackballCreated(object sender, TrackballEventArgs e)
                 StrokeWidth = 3,           
                 Type = ShapeType.InvertedTriangle 
             };
+
             // Bind the date label to the date from the data item with a specific format
             dateLabel1.SetBinding(Label.TextProperty, new Binding("Date") 
             { 
                 Source = item.DataItem, 
                 StringFormat = "{0:dd/MM/yyyy}" 
             });
+
             // Bind the value to the label from the item
             valueLabel1.SetBinding(Label.TextProperty, new Binding("Label") { Source = item });
         }
@@ -197,12 +199,14 @@ private void chart_TrackballCreated(object sender, TrackballEventArgs e)
                 StrokeWidth = 3,           
                 Type = ShapeType.Cross      
             };
+
             // Bind the date label to the date from the data item with a specific format
             dateLabel2.SetBinding(Label.TextProperty, new Binding("Date") 
             { 
                 Source = item.DataItem, 
                 StringFormat = "{0:dd/MM/yyyy}" 
             });
+
             // Bind the value to the label from the item
             valueLabel2.SetBinding(Label.TextProperty, new Binding("Label") { Source = item });
         }
@@ -219,12 +223,14 @@ private void chart_TrackballCreated(object sender, TrackballEventArgs e)
                 StrokeWidth = 3,            
                 Type = ShapeType.Diamond     
             };
+
             // Bind the date label to the date from the data item with a specific format
             dateLabel3.SetBinding(Label.TextProperty, new Binding("Date") 
             { 
                 Source = item.DataItem, 
                 StringFormat = "{0:dd/MM/yyyy}" 
             });
+            
             // Bind the value to the label from the item
             valueLabel3.SetBinding(Label.TextProperty, new Binding("Label") { Source = item });
         }
