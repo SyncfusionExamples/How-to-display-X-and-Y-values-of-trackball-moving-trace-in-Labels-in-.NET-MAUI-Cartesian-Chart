@@ -247,4 +247,4 @@ This setup allows the  [TrackballCreated](https://help.syncfusion.com/cr/maui/Sy
 
 If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
 
-For a step by step procedure, refer to the [Display trackball values in layout KB article]().
+For a step by step procedure, refer to the [Display trackball values in layout KB article](https://support.syncfusion.com/kb/article/17704/how-to-display-x-and-y-values-of-trackball-moving-trace-in-labels-in-net-maui-cartesian-chart).
