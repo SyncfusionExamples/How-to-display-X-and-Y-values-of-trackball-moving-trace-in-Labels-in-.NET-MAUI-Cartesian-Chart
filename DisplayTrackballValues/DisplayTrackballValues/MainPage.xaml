@@ -17,13 +17,13 @@
 
         <chart:SfCartesianChart x:Name="chart" Grid.Column="0" TrackballCreated="chart_TrackballCreated">
 
-            <chart:SfCartesianChart.XAxes>
-                <chart:DateTimeAxis />
-            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.Title>
+                <Label Text="Sales Comparison" ></Label>
+            </chart:SfCartesianChart.Title>
 
-            <chart:SfCartesianChart.YAxes>
-                <chart:NumericalAxis/>
-            </chart:SfCartesianChart.YAxes>
+            <chart:SfCartesianChart.XAxes>
+                <chart:DateTimeAxis Interval="2" EdgeLabelsVisibilityMode="AlwaysVisible"/>
+            </chart:SfCartesianChart.XAxes>
 
             <chart:SfCartesianChart.TrackballBehavior>
                 <chart:ChartTrackballBehavior ShowLabel="False"/>

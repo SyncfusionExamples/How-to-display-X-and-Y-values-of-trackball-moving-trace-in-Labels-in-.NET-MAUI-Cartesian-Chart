@@ -15,7 +15,7 @@ The [.NET MAUI Cartesian Chart](https://www.syncfusion.com/maui-controls/maui-c
         <chart:SfCartesianChart x:Name="chart" Grid.Column="0" TrackballCreated="chart_TrackballCreated">
 
             <chart:SfCartesianChart.XAxes>
-                <chart:DateTimeAxis />
+                <chart:DateTimeAxis Interval="2" EdgeLabelsVisibilityMode="AlwaysVisible"/>
             </chart:SfCartesianChart.XAxes>
 
             <chart:SfCartesianChart.YAxes>
@@ -241,7 +241,7 @@ This setup allows the  [TrackballCreated](https://help.syncfusion.com/cr/maui/Sy
 
 **Output**
  
- ![DisplayTrackballValues.gif](https://support.syncfusion.com/kb/agent/attachment/article/17704/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxMTg2Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.84dybP-P0Y1qPrpa7NiAKXJoddewgrl-Jj-ZXvoG1C8)
+ ![DisplayTrackballValues.gif](https://support.syncfusion.com/kb/agent/attachment/article/17704/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxMjQ3Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.hJ9fzo7VIXOBN4Buao5sPVWa52kPuCDSKgAwwBXPYVM)
 
 ## Troubleshooting
 
